@@ -1,0 +1,22 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Spectral', serif;
+    font-size: 1.5em;
+    background-color: #F8F8FF;
+    padding: 15px;
+    margin: 0;
+}
+table{
+    width: 100%;
+    font-size: 0.9em;
+}
+table, th, td {
+    font-family: 'Source Code Pro', monospace;
+    border: 2px solid lightgray;
+    border-collapse: collapse;
+    text-align: left;
+    table-layout: fixed;
+}
