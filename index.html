@@ -67,24 +67,36 @@
         <td>returns back to parent directory</td>
     </tr>
     <tr>
+        <td>pushd</td>
+        <td>pushes directory</td>
+    </tr>
+    <tr>
+        <td>popd</td>
+        <td>pops directory</td>
+    </tr>
+    <tr>
         <td>mkdir directoryName</td>
         <td>creates new directory</td>
     </tr>
     <tr>
+        <td>mkdir -p folder1/folder2/folder3</td>
+        <td>creates new directory path</td>
+    </tr>
+    <tr>
         <td>rmdir directoryName</td>
-        <td>removes directory</td>
+        <td>removes current empty directory<br>use -r for recursive removal</td>
     </tr>
     <tr>
         <td>touch fileName.extension</td>
         <td>creates new file</td>
     </tr>
     <tr>
-        <td>rm fileName.extension</td>
-        <td>removes specific file</td>
-    </tr>
-    <tr>
         <td>cp fileName.extension copiedFileName.extension</td>
         <td>copies a file</td>
+    </tr>
+    <tr>
+        <td>cp fileName.extension directory_path</td>
+        <td>copies a file in other directory<br>use -r for recursive copying</td>
     </tr>
     <tr>
         <td>mv fileName.extension renamedFile.extension</td>
@@ -99,28 +111,12 @@
         <td>concatenates files</td>
     </tr>
     <tr>
+        <td>rm fileName.extension</td>
+        <td>removes specific file<br>use -r for recursive removal</td>
+    </tr>
+    <tr>
         <td>clear</td>
         <td>clears terminal window</td>
-    </tr>
-    <tr>
-        <td>chmod</td>
-        <td>change mode sets permissions of read/write/execute<br> for users, members and others</td>
-    </tr>
-    <tr>
-        <td>man commandName</td>
-        <td>explains what a command does</td>
-    </tr>
-    <tr>
-        <td>apropos</td>
-        <td>finds what manual page is appropriate</td>
-    </tr>
-    <tr>
-        <td>env</td>
-        <td>looks at your environment</td>
-    </tr>
-    <tr>
-        <td>export</td>
-        <td>exports/sets a new environment</td>
     </tr>
     <tr>
         <td>locate fileName.extension</td>
@@ -139,14 +135,6 @@
         <td>prints computer's network name</td>
     </tr>
     <tr>
-        <td>pushd</td>
-        <td>pushes directory</td>
-    </tr>
-    <tr>
-        <td>popd</td>
-        <td>pops directory</td>
-    </tr>
-    <tr>
         <td>less</td>
         <td>pages through a file</td>
     </tr>
@@ -157,6 +145,30 @@
     <tr>
         <td>ping google.com</td>
         <td>checks internet speed<br>use (Ctrl + c) OR (Ctrl + Shift + c) to terminate</td>
+    </tr>
+    <tr>
+        <td>chmod</td>
+        <td>change mode sets permissions of read/write/execute<br> for users, members and others</td>
+    </tr>
+    <tr>
+        <td>chown</td>
+        <td>change owner</td>
+    </tr>
+    <tr>
+        <td>man commandName</td>
+        <td>explains what a command does</td>
+    </tr>
+    <tr>
+        <td>apropos</td>
+        <td>finds what manual page is appropriate</td>
+    </tr>
+    <tr>
+        <td>env</td>
+        <td>looks at your environment</td>
+    </tr>
+    <tr>
+        <td>export</td>
+        <td>exports/sets a new environment</td>
     </tr>
     <tr>
         <td>exit</td>
