@@ -249,6 +249,32 @@
         <td><b>ACTION</b></td>
     </tr>
     <tr>
+        <td>git --version</td>
+        <td>Check if git is installed and which version</td>
+    </tr>
+    <tr>
+        <td>sudo apt-get update<br>
+            sudo apt-get install git</td>
+        <td>Install git on Ubuntu</td>
+    </tr>
+    <tr>
+        <td>git config --global user.name "FirstName LastName"</td>
+        <td>Configure git name<br>
+            These details will be associated with any commits that you create</td>
+    </tr>
+    <tr>
+        <td>git config --global user.email "email@example.com"</td>
+        <td>Configure git email</td>
+    </tr>
+    <tr>
+        <td>git config --global color.ui auto</td>
+        <td>Configure git to get colored diff output</td>
+    </tr>
+    <tr>
+        <td>git clone</td>
+        <td>Clone an entire rpository with its history on your local machine</td>
+    </tr>
+    <tr>
         <td>git log</td>
         <td>Show commit logs</td>
     </tr>
@@ -274,11 +300,21 @@
     </tr>
     <tr>
         <td>git commit -m'description'</td>
-        <td>Record changes to the repository and add message</td>
+        <td>Record/commit changes to the repository and add message</td>
     </tr>
     <tr>
         <td>git push</td>
-        <td>Update remote refs along with associated objects</td>
+        <td>Update/push remote refs along with associated objects</td>
+    </tr>
+    <tr>
+        <td>touch .gitignore<br>
+            touch password.txt</td>
+        <td>Create a file with sensitive data and a .gitignore file for the files
+            you do not wish git keep track of or commit</td>
+    </tr>
+    <tr>
+        <td>echo 'password.txt' >> .gitignore</td>
+        <td>Add your sensitive file to be ignored into the .gitignore file</td>
     </tr>
 </table>
 <script src="script.js"></script>
