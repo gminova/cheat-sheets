@@ -21,3 +21,7 @@ table, th, td {
     text-align: left;
     table-layout: fixed;
 }
+.blockquote{
+    border-left: 5px solid gray;
+    padding: 10px 20px;
+}
