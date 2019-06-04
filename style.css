@@ -2,7 +2,8 @@ html {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     font-family: 'Spectral', serif;
     font-size: 1.5em;
     background-color: #F8F8FF;
@@ -10,22 +11,57 @@ body{
     margin: 0;
     max-width: 1200px;
 }
-table{
-    width: 100%;
-    font-size: 0.9em;
-    font-size:1vw;
+
+.menu {
+    padding: 15px 15px;
+    margin: 10px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    list-style-type: none;
+    display: inline-block;
+    text-align: right;
+    background: lightgray;background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    opacity: 0.8;
+    max-width: 250px;
+    border-radius: 3px;
 }
-table, th, td {
+
+.menu-link{
+    color: white;
+    text-decoration: none;
+    text-transform: UPPERCASE;
+}
+
+main{
+    position: relative;
+}
+
+table {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 22px;
+}
+
+table,
+th,
+td {
     font-family: 'Source Code Pro', monospace;
     border: 2px solid lightgray;
     border-collapse: collapse;
     text-align: left;
     table-layout: fixed;
 }
-.md-table{
-    overflow-x:auto;
+
+table,
+.md-table {
+    overflow-x: auto;
 }
-.blockquote{
+
+.blockquote {
     border-left: 5px solid gray;
     padding: 10px 20px;
 }
