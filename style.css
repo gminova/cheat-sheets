@@ -15,7 +15,7 @@ body {
 }
 
 .menu {
-    padding: 15px 15px;
+    padding: 10px 10px;
     margin: 15px 15px;
     position: fixed;
     z-index: 100;
@@ -37,6 +37,7 @@ body {
     color: white;
     text-decoration: none;
     text-transform: UPPERCASE;
+    border-bottom: solid orange 1px;
 }
 
 main {
