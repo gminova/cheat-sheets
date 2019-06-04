@@ -1,20 +1,21 @@
 html {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Spectral', serif;
     font-size: 1.5em;
     background-color: #F8F8FF;
-    padding: 15px;
+    padding: 15px 15px;
     margin: 0;
     max-width: 1200px;
 }
 
 .menu {
     padding: 15px 15px;
-    margin: 10px;
+    margin: 15px 15px;
     position: fixed;
     z-index: 100;
     top: 0;
@@ -27,7 +28,7 @@ body {
     color: white;
     opacity: 0.8;
     max-width: 250px;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .menu-link{
