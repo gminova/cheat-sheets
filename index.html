@@ -9,8 +9,12 @@
 </head>
 
 <body>
+    <nav id="mobileNav" class="menu-btn">&#9776;</nav>
     <nav>
-        <ul id="menu-btn" class="menu">
+        <ul id="sideNav" class="menu">
+            <li>
+                <div id="closeNav" class="close-nav">&times;</div>
+            </li>
             <li><a class="menu-link" href="#bash">Bash</a></li>
             <li><a class="menu-link" href="#git">Git + GitHub</a></li>
             <li><a class="menu-link" href="#md">Markdown</a></li>
@@ -22,925 +26,925 @@
     </nav>
 </body>
 <main>
-<h1>FAC pre-course materials</h1>
-<h2 id="bash">Command line</h2>
-<table class="table">
-    <tr>
-        <td><b>COMMAND</b></td>
-        <td><b>ACTION</b></td>
-    </tr>
-    <tr>
-        <td>ctrl + alt + t</td>
-        <td>Open terminal</td>
-    </tr>
-    <tr>
-        <td>echo $0</td>
-        <td>Confirm you are in Bash</td>
-    </tr>
-    <tr>
-        <td>pwd</td>
-        <td>Print working directory</td>
-    </tr>
-    <tr>
-        <td>ls</td>
-        <td>List files</td>
-    </tr>
-    <tr>
-        <td>ls -l</td>
-        <td>List files with their permissions</td>
-    </tr>
-    <tr>
-        <td>ls -a</td>
-        <td>List all files, including hidden files</td>
-    </tr>
-    <tr>
-        <td>ls -al</td>
-        <td>List all files with their permissions, including hidden files</td>
-    </tr>
-    <tr>
-        <td>cd</td>
-        <td>Change directory to home directory</td>
-    </tr>
-    <tr>
-        <td>cd /subDirectoryName</td>
-        <td>Enter specific sub-directory</td>
-    </tr>
-    <tr>
-        <td>cd ..</td>
-        <td>Return back to parent directory</td>
-    </tr>
-    <tr>
-        <td>pushd</td>
-        <td>Push directory</td>
-    </tr>
-    <tr>
-        <td>popd</td>
-        <td>Pop directory</td>
-    </tr>
-    <tr>
-        <td>mkdir directoryName</td>
-        <td>Create new directory</td>
-    </tr>
-    <tr>
-        <td>mkdir -p folder1/folder2/folder3</td>
-        <td>Create new directory path</td>
-    </tr>
-    <tr>
-        <td>rmdir directoryName</td>
-        <td>Remove current empty directory</td>
-    </tr>
-    <tr>
-        <td>touch fileName.html</td>
-        <td>Create new file</td>
-    </tr>
-    <tr>
-        <td>cp fileName.html copiedFileName.html</td>
-        <td>Copy a file</td>
-    </tr>
-    <tr>
-        <td>cp fileName.html directory_path</td>
-        <td>Copy a file in another directory<br>use -r for recursive copying</td>
-    </tr>
-    <tr>
-        <td>mv fileName.html renamedFile.html</td>
-        <td>Rename specific file</td>
-    </tr>
-    <tr>
-        <td>mv fileName.html directory_path</td>
-        <td>Move specific file to other directory</td>
-    </tr>
-    <tr>
-        <td>cat file1.txt file2.txt > file3.txt</td>
-        <td>Concatenate files</td>
-    </tr>
-    <tr>
-        <td>diff -u new.html old.html</td>
-        <td>Compare differences between files</td>
-    </tr>
-    <tr>
-        <td>rm fileName.html</td>
-        <td>Remove specific file<br>use -r for recursive removal</td>
-    </tr>
-    <tr>
-        <td>clear</td>
-        <td>Clear terminal window</td>
-    </tr>
-    <tr>
-        <td>locate fileName.html</td>
-        <td>Find files globally</td>
-    </tr>
-    <tr>
-        <td>find fileName.html</td>
-        <td>Find files within directory</td>
-    </tr>
-    <tr>
-        <td>grep</td>
-        <td>Find things inside files</td>
-    </tr>
-    <tr>
-        <td>hostname</td>
-        <td>Print computer's network name</td>
-    </tr>
-    <tr>
-        <td>less</td>
-        <td>Page through a file</td>
-    </tr>
-    <tr>
-        <td>xargs</td>
-        <td>Execute arguments</td>
-    </tr>
-    <tr>
-        <td>ping google.com</td>
-        <td>Check internet speed<br>use (Ctrl + c) OR (Ctrl + Shift + c) to terminate</td>
-    </tr>
-    <tr>
-        <td>chmod</td>
-        <td>Change permissions to read/write/execute files
-            for users, members and others</td>
-    </tr>
-    <tr>
-        <td>chown</td>
-        <td>Change owner</td>
-    </tr>
-    <tr>
-        <td>man commandName</td>
-        <td>Explain what a command does</td>
-    </tr>
-    <tr>
-        <td>apropos</td>
-        <td>Find what manual page is appropriate</td>
-    </tr>
-    <tr>
-        <td>env</td>
-        <td>Look at your environment</td>
-    </tr>
-    <tr>
-        <td>export</td>
-        <td>Export/set a new environment</td>
-    </tr>
-    <tr>
-        <td>exit</td>
-        <td>Exit terminal</td>
-    </tr>
-</table>
-<h2 id="git">Git & GitHub</h2>
-<p>
-    <h3>How did viewing a diff between two versions of a file help you see the bug that
-        was introduced?</h3>
-
-    The diff command compares files line by line, while the -u (unified) option, by
-    default, shows 3 lines of unified context to help understand typos, bugs and
-    issues. This command significantly reduced the amount of lines I had to review
-    in order to find the typo.<br>
-
-    <h3>How could having easy access to the entire history of a file make you a more
-        efficient programmer in the long term?</h3>
-
-    Version-control systems (VCS), such as Git, can help a team keep track of who made
-    a change and when. A good commit history shows how algorithms were developed
-    and can provide access to an older working version of your code. Using Git boosts
-    performance, ensures security and offers flexibility when working in a team.<br>
-
-    <h3>What do you think are the pros and cons of manually choosing when to create a
-        commit, like you do in Git, vs having versions automatically saved, like Google
-        docs does?</h3>
-
-    Pros: Manually pushing code on GitHub enables us to test our code first.
-    This helps keep the commit history clean, logical and easy to follow. Git prevents
-    conflicts when changes made by multiple developers override each other.<br>
-    <br>
-    Cons: It is time consuming to manually commit changes and it can lead to a loss of
-    logical flow if commits are inconsistent or have poor descriptions. Version-control
-    can be hard to learn, however once mastered it increases developement speed.<br>
-
-    <h3>Why do you think some version control systems, like Git, allow saving multiple
-        files in one commit, while others, like Google Docs, treat each file separately?</h3>
-
-    Git records changes as a stream of snapshots and acts as a global information
-    tracker for inter-dependant files, which are all part of a project. A logical
-    change can affect multiple files, hence a single commit reflecting changes in
-    multiple files is more appropriate. Git commit history can be accessed offline,
-    whereas the Google Docs history can be accessed online only. Over- or under-commiting
-    can make reverting to a previous version of your code harder. Google docs, by
-    contrast, is a tool used for creating single independent files.<br>
-
-    <h3>How can you use the commands git log and git diff to view the history of files?</h3>
-
-    Git log shows the whole log history (all commits) for all files, while git diff
-    shows changes between commits, commit and working tree, etc. and allows to look at
-    specific changes line by line.<br>
-
-    <h3>How might using version control make you more confident to make changes that
-        could break something?</h3>
-
-    Keeping track of changes helps understand when and why code breaks, as well as
-    who introduced the 'faulty' change. Having a back-up allows developers to revert to
-    a stable version of the code, ensuring the usability of a project until a better
-    working version is released.<br>
-
-    <h3>Now that you have your workspace set up, what do you want to try using Git for?</h3>
-
-    I would like to keep track of my work and progress, as well as collaborate in group
-    projects.<br>
-</p>
-<h4>Git commands</h4>
-<table>
-    <tr>
-        <td><b>COMMAND</b></td>
-        <td><b>ACTION</b></td>
-    </tr>
-    <tr>
-        <td>git --version</td>
-        <td>Check if git is installed and which version</td>
-    </tr>
-    <tr>
-        <td>sudo apt-get update<br>
-            sudo apt-get install git</td>
-        <td>Install git on Ubuntu</td>
-    </tr>
-    <tr>
-        <td>git config --global user.name "FirstName LastName"</td>
-        <td>Configure git name<br>
-            These details will be associated with any commits that you create</td>
-    </tr>
-    <tr>
-        <td>git config --global user.email "email@example.com"</td>
-        <td>Configure git email</td>
-    </tr>
-    <tr>
-        <td>git config --global color.ui auto</td>
-        <td>Configure git to get colored diff output</td>
-    </tr>
-    <tr>
-        <td>git clone</td>
-        <td>Clone an entire rpository with its history on your local machine</td>
-    </tr>
-    <tr>
-        <td>git log</td>
-        <td>Show commit logs</td>
-    </tr>
-    <tr>
-        <td>git diff</td>
-        <td>Show changes between commits, commit and working tree, etc</td>
-    </tr>
-    <tr>
-        <td>git status</td>
-        <td>Show the working tree status</td>
-    </tr>
-    <tr>
-        <td>git checkout</td>
-        <td>Switch branches or restore working tree files</td>
-    </tr>
-    <tr>
-        <td>git init</td>
-        <td>Create an empty Git repository or reinitialize an existing one</td>
-    </tr>
-    <tr>
-        <td>git add</td>
-        <td>Add file contents to the index ("the staging area") to be committed
-    </tr>
-    <tr>
-        <td>git commit -m'description'</td>
-        <td>Record/commit changes to the repository and add message</td>
-    </tr>
-    <tr>
-        <td>git push</td>
-        <td>Update/push remote refs along with associated objects</td>
-    </tr>
-    <tr>
-        <td>touch .gitignore<br>
-            touch password.txt</td>
-        <td>Create a file with sensitive data and a .gitignore file for the files
-            you do not wish git keep track of or commit</td>
-    </tr>
-    <tr>
-        <td>echo 'password.txt' >> .gitignore</td>
-        <td>Add your sensitive file to be ignored into the .gitignore file</td>
-    </tr>
-</table>
-<h2 id="md">Markdown</h2>
-<div class="md-table">
-    <table>
+    <h1>FAC pre-course materials</h1>
+    <h2 id="bash">Command line</h2>
+    <table class="table">
         <tr>
-            <td><b>FORMATTING</b></td>
-            <td><b>OUTPUT</b></td>
+            <td><b>COMMAND</b></td>
+            <td><b>ACTION</b></td>
         </tr>
         <tr>
-            <td>**This is bold**</td>
-            <td><b>This is bold</b></td>
+            <td>ctrl + alt + t</td>
+            <td>Open terminal</td>
         </tr>
         <tr>
-            <td>_This is italic_</td>
-            <td><i>This is italic</i></td>
+            <td>echo $0</td>
+            <td>Confirm you are in Bash</td>
         </tr>
         <tr>
-            <td>**_This is bold and italic_**</td>
-            <td><b><i>This is bold and italic</i></b></td>
+            <td>pwd</td>
+            <td>Print working directory</td>
         </tr>
         <tr>
-            <td># Header one</td>
-            <td>
-                <h1>Header one</h1>
-            </td>
+            <td>ls</td>
+            <td>List files</td>
         </tr>
         <tr>
-            <td>## Header two</td>
-            <td>
-                <h2>Header two</h2>
-            </td>
+            <td>ls -l</td>
+            <td>List files with their permissions</td>
         </tr>
         <tr>
-            <td>### Header three</td>
-            <td>
-                <h3>Header three</h3>
-            </td>
+            <td>ls -a</td>
+            <td>List all files, including hidden files</td>
         </tr>
         <tr>
-            <td>#### Header four</td>
-            <td>
-                <h4>Header four</h4>
-            </td>
+            <td>ls -al</td>
+            <td>List all files with their permissions, including hidden files</td>
         </tr>
         <tr>
-            <td>##### Header five</td>
-            <td>
-                <h5>Header five</h5>
-            </td>
+            <td>cd</td>
+            <td>Change directory to home directory</td>
         </tr>
         <tr>
-            <td>###### Header six</td>
-            <td>
-                <h6>Header six</h6>
-            </td>
+            <td>cd /subDirectoryName</td>
+            <td>Enter specific sub-directory</td>
         </tr>
         <tr>
-            <td>[Search for it](https://www.google.com/)</td>
-            <td><a href="https://www.google.com/" target="_blank">Search for it</a></td>
+            <td>cd ..</td>
+            <td>Return back to parent directory</td>
         </tr>
         <tr>
-            <td>Click here for [Google][my_reference]<br>
-                [my_reference]:https://www.google.com/</td>
-            <td>Click here for <a href="https://www.google.com/" target="_blank">Google</a></td>
+            <td>pushd</td>
+            <td>Push directory</td>
         </tr>
         <tr>
-            <td>![GitHub Logo](https://avatars1.githubusercontent.com/u/9919?s=200&v=4)</td>
-            <td><img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4"></td>
+            <td>popd</td>
+            <td>Pop directory</td>
         </tr>
         <tr>
-            <td>![GitHub Logo][logo]<br>
-                [logo]:https://avatars1.githubusercontent.com/u/9919?s=200&v=4</td>
-            <td><img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4"></td>
+            <td>mkdir directoryName</td>
+            <td>Create new directory</td>
         </tr>
         <tr>
-            <td>> "Insert your quote."</td>
-            <td>
-                <blockquote class="blockquote">
-                    "Insert your quote."
-                </blockquote>
-            </td>
+            <td>mkdir -p folder1/folder2/folder3</td>
+            <td>Create new directory path</td>
         </tr>
         <tr>
-            <td>
-                * Eggs<br>
-                * Bacon<br>
-                * Milk<br>
-            </td>
-            <td>
-                <uo>
-                    <li>Eggs</li>
-                    <li>Bacon</li>
-                    <li>Milk</li>
-                </uo>
-            </td>
+            <td>rmdir directoryName</td>
+            <td>Remove current empty directory</td>
         </tr>
         <tr>
-            <td>
-                1. Code<br>
-                2. Test<br>
-                3. Repeat<br>
-            </td>
-            <td>
-                <ol>
-                    <li>Code</li>
-                    <li>Test</li>
-                    <li>Repeat</li>
-                </ol>
-            </td>
+            <td>touch fileName.html</td>
+            <td>Create new file</td>
         </tr>
         <tr>
-            <td>
-                1. Some heading<br>
-                <pre> Some paragraph</pre>
-            </td>
-            <td>
-                1. Some heading<br>
-                <p>Some paragraph</p>
-            </td>
+            <td>cp fileName.html copiedFileName.html</td>
+            <td>Copy a file</td>
+        </tr>
+        <tr>
+            <td>cp fileName.html directory_path</td>
+            <td>Copy a file in another directory<br>use -r for recursive copying</td>
+        </tr>
+        <tr>
+            <td>mv fileName.html renamedFile.html</td>
+            <td>Rename specific file</td>
+        </tr>
+        <tr>
+            <td>mv fileName.html directory_path</td>
+            <td>Move specific file to other directory</td>
+        </tr>
+        <tr>
+            <td>cat file1.txt file2.txt > file3.txt</td>
+            <td>Concatenate files</td>
+        </tr>
+        <tr>
+            <td>diff -u new.html old.html</td>
+            <td>Compare differences between files</td>
+        </tr>
+        <tr>
+            <td>rm fileName.html</td>
+            <td>Remove specific file<br>use -r for recursive removal</td>
+        </tr>
+        <tr>
+            <td>clear</td>
+            <td>Clear terminal window</td>
+        </tr>
+        <tr>
+            <td>locate fileName.html</td>
+            <td>Find files globally</td>
+        </tr>
+        <tr>
+            <td>find fileName.html</td>
+            <td>Find files within directory</td>
+        </tr>
+        <tr>
+            <td>grep</td>
+            <td>Find things inside files</td>
+        </tr>
+        <tr>
+            <td>hostname</td>
+            <td>Print computer's network name</td>
+        </tr>
+        <tr>
+            <td>less</td>
+            <td>Page through a file</td>
+        </tr>
+        <tr>
+            <td>xargs</td>
+            <td>Execute arguments</td>
+        </tr>
+        <tr>
+            <td>ping google.com</td>
+            <td>Check internet speed<br>use (Ctrl + c) OR (Ctrl + Shift + c) to terminate</td>
+        </tr>
+        <tr>
+            <td>chmod</td>
+            <td>Change permissions to read/write/execute files
+                for users, members and others</td>
+        </tr>
+        <tr>
+            <td>chown</td>
+            <td>Change owner</td>
+        </tr>
+        <tr>
+            <td>man commandName</td>
+            <td>Explain what a command does</td>
+        </tr>
+        <tr>
+            <td>apropos</td>
+            <td>Find what manual page is appropriate</td>
+        </tr>
+        <tr>
+            <td>env</td>
+            <td>Look at your environment</td>
+        </tr>
+        <tr>
+            <td>export</td>
+            <td>Export/set a new environment</td>
+        </tr>
+        <tr>
+            <td>exit</td>
+            <td>Exit terminal</td>
         </tr>
     </table>
-</div>
-<h2 id="html">HTML</h2>
-<img src="https://almosthumor.files.wordpress.com/2011/09/html5demo1.jpg" alt="semantic HTML chart">
-<table>
-    <tr>
-        <th>Tag</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td>&lt;!--...--&gt;</td>
-        <td>Defines a comment</td>
-    </tr>
-    <tr>
-        <td>&lt;!DOCTYPE&gt;&nbsp;</td>
-        <td>Defines the document type</td>
-    </tr>
-    <tr>
-        <td>&lt;a&gt;</td>
-        <td>Defines a hyperlink</td>
-    </tr>
-    <tr>
-        <td>&lt;abbr&gt;</td>
-        <td>Defines an abbreviation or an acronym</td>
-    </tr>
-    <tr>
-        <td>&lt;acronym&gt;</td>
-        <td>Not supported in HTML5. Use &lt;abbr&gt; instead.<br>
-            Defines an acronym</td>
-    </tr>
-    <tr>
-        <td>&lt;address&gt;</td>
-        <td>Defines contact information for the author/owner of a document</td>
-    </tr>
-    <tr>
-        <td>&lt;applet&gt;</td>
-        <td>Not supported in HTML5. Use &lt;embed&gt; or &lt;object&gt; instead.<br>
-            Defines an embedded applet</td>
-    </tr>
-    <tr>
-        <td>&lt;area&gt;</td>
-        <td>Defines an area inside an image-map</td>
-    </tr>
-    <tr>
-        <td>&lt;article&gt;</td>
-        <td>Defines an article</td>
-    </tr>
-    <tr>
-        <td>&lt;aside&gt;</td>
-        <td>Defines content aside from the page content</td>
-    </tr>
-    <tr>
-        <td>&lt;audio&gt;</td>
-        <td>Defines sound content</td>
-    </tr>
-    <tr>
-        <td>&lt;b&gt;</td>
-        <td>Defines bold text</td>
-    </tr>
-    <tr>
-        <td>&lt;base&gt;</td>
-        <td>Specifies the base URL/target for all relative URLs in a document</td>
-    </tr>
-    <tr>
-        <td>&lt;basefont&gt;</td>
-        <td>Not supported in HTML5. Use CSS instead.<br>
-            Specifies a default color, size, and font for all text in a document</td>
-    </tr>
-    <tr>
-        <td>&lt;bdi&gt;</td>
-        <td>Isolates a part of text that might be formatted in a different direction
-            from other text outside it</td>
-    </tr>
-    <tr>
-        <td>&lt;bdo&gt;</td>
-        <td>Overrides the current text direction</td>
-    </tr>
-    <tr>
-        <td>&lt;big&gt;</td>
-        <td>Not supported in HTML5. Use CSS instead.<br>
-            Defines big text</td>
-    </tr>
-    <tr>
-        <td>&lt;blockquote&gt;</td>
-        <td>Defines a section that is quoted from another source</td>
-    </tr>
-    <tr>
-        <td>&lt;body&gt;</td>
-        <td>Defines the document's body</td>
-    </tr>
-    <tr>
-        <td>&lt;br&gt;</td>
-        <td>Defines a single line break</td>
-    </tr>
-    <tr>
-        <td>&lt;button&gt;</td>
-        <td>Defines a clickable button</td>
-    </tr>
-    <tr>
-        <td>&lt;canvas&gt;</td>
-        <td>Used to draw graphics, on the fly, via scripting (usually JavaScript)</td>
-    </tr>
-    <tr>
-        <td>&lt;caption&gt;</td>
-        <td>Defines a table caption</td>
-    </tr>
-    <tr>
-        <td>&lt;center&gt;</td>
-        <td>Not supported in HTML5. Use CSS instead.<br>
-            Defines centered text</td>
-    </tr>
-    <tr>
-        <td>&lt;cite&gt;</td>
-        <td>Defines the title of a work</td>
-    </tr>
-    <tr>
-        <td>&lt;code&gt;</td>
-        <td>Defines a piece of computer code</td>
-    </tr>
-    <tr>
-        <td>&lt;col&gt;</td>
-        <td>Specifies column properties for each column within a &lt;colgroup&gt; element&nbsp;</td>
-    </tr>
-    <tr>
-        <td>&lt;colgroup&gt;</td>
-        <td>Specifies a group of one or more columns in a table for formatting</td>
-    </tr>
-    <tr>
-        <td>&lt;data&gt;</td>
-        <td>Links the given content with a machine-readable translation</td>
-    </tr>
-    <tr>
-        <td>&lt;datalist&gt;</td>
-        <td>Specifies a list of pre-defined options for input controls</td>
-    </tr>
-    <tr>
-        <td>&lt;dd&gt;</td>
-        <td>Defines a description/value of a term in a description list</td>
-    </tr>
-    <tr>
-        <td>&lt;del&gt;</td>
-        <td>Defines text that has been deleted from a document</td>
-    </tr>
-    <tr>
-        <td>&lt;details&gt;</td>
-        <td>Defines additional details that the user can view or hide</td>
-    </tr>
-    <tr>
-        <td>&lt;dfn&gt;</td>
-        <td>Represents the defining instance of a term</td>
-    </tr>
-    <tr>
-        <td>&lt;dialog&gt;</td>
-        <td>Defines a dialog box or window</td>
-    </tr>
-    <tr>
-        <td>&lt;dir&gt;</td>
-        <td>Not supported in HTML5. Use &lt;ul&gt; instead.<br>
-            Defines a directory list</td>
-    </tr>
-    <tr>
-        <td>&lt;div&gt;</td>
-        <td>Defines a section in a document</td>
-    </tr>
-    <tr>
-        <td>&lt;dl&gt;</td>
-        <td>Defines a description list</td>
-    </tr>
-    <tr>
-        <td>&lt;dt&gt;</td>
-        <td>Defines a term/name in a description list</td>
-    </tr>
-    <tr>
-        <td>&lt;em&gt;</td>
-        <td>Defines emphasized text&nbsp;</td>
-    </tr>
-    <tr>
-        <td>&lt;embed&gt;</td>
-        <td>Defines a container for an external (non-HTML) application</td>
-    </tr>
-    <tr>
-        <td>&lt;fieldset&gt;</td>
-        <td>Groups related elements in a form</td>
-    </tr>
-    <tr>
-        <td>&lt;figcaption&gt;</td>
-        <td>Defines a caption for a &lt;figure&gt; element</td>
-    </tr>
-    <tr>
-        <td>&lt;figure&gt;</td>
-        <td>Specifies self-contained content</td>
-    </tr>
-    <tr>
-        <td>&lt;font&gt;</td>
-        <td>Not supported in HTML5. Use CSS instead.<br>
-            Defines font, color, and size for text</td>
-    </tr>
-    <tr>
-        <td>&lt;footer&gt;</td>
-        <td>Defines a footer for a document or section</td>
-    </tr>
-    <tr>
-        <td>&lt;form&gt;</td>
-        <td>Defines an HTML form for user input</td>
-    </tr>
-    <tr>
-        <td>&lt;frame&gt;</td>
-        <td>Not supported in HTML5.<br>
-            Defines a window (a frame) in a frameset</td>
-    </tr>
-    <tr>
-        <td>&lt;frameset&gt;</td>
-        <td>Not supported in HTML5.<br>
-            Defines a set of frames</td>
-    </tr>
-    <tr>
-        <td>&lt;h1&gt; to &lt;h6&gt;</td>
-        <td>Defines HTML headings</td>
-    </tr>
-    <tr>
-        <td>&lt;head&gt;</td>
-        <td>Defines information about the document</td>
-    </tr>
-    <tr>
-        <td>&lt;header&gt;</td>
-        <td>Defines a header for a document or section</td>
-    </tr>
-    <tr>
-        <td>&lt;hr&gt;</td>
-        <td>Defines a thematic change in the content</td>
-    </tr>
-    <tr>
-        <td>&lt;html&gt;</td>
-        <td>Defines the root of an HTML document</td>
-    </tr>
-    <tr>
-        <td>&lt;i&gt;</td>
-        <td>Defines a part of text in an alternate voice or mood</td>
-    </tr>
-    <tr>
-        <td>&lt;iframe&gt;</td>
-        <td>Defines an inline frame</td>
-    </tr>
-    <tr>
-        <td>&lt;img&gt;</td>
-        <td>Defines an image</td>
-    </tr>
-    <tr>
-        <td>&lt;input&gt;</td>
-        <td>Defines an input control</td>
-    </tr>
-    <tr>
-        <td>&lt;ins&gt;</td>
-        <td>Defines a text that has been inserted into a document</td>
-    </tr>
-    <tr>
-        <td>&lt;kbd&gt;</td>
-        <td>Defines keyboard input</td>
-    </tr>
-    <tr>
-        <td>&lt;label&gt;</td>
-        <td>Defines a label&nbsp;for an &lt;input&gt; element</td>
-    </tr>
-    <tr>
-        <td>&lt;legend&gt;</td>
-        <td>Defines a caption for a &lt;fieldset&gt; element</td>
-    </tr>
-    <tr>
-        <td>&lt;li&gt;</td>
-        <td>Defines a list item</td>
-    </tr>
-    <tr>
-        <td>&lt;link&gt;</td>
-        <td>Defines the relationship between a document and an external resource (most
-            used to link to style sheets)</td>
-    </tr>
-    <tr>
-        <td>&lt;main&gt;</td>
-        <td>Specifies the main content of a document</td>
-    </tr>
-    <tr>
-        <td>&lt;map&gt;</td>
-        <td>Defines a client-side image-map</td>
-    </tr>
-    <tr>
-        <td>&lt;mark&gt;</td>
-        <td>Defines marked/highlighted text</td>
-    </tr>
-    <tr>
-        <td>&lt;meta&gt;</td>
-        <td>Defines metadata about an HTML document</td>
-    </tr>
-    <tr>
-        <td>&lt;meter&gt;</td>
-        <td>Defines a scalar measurement within a known range (a gauge)</td>
-    </tr>
-    <tr>
-        <td>&lt;nav&gt;</td>
-        <td>Defines navigation links</td>
-    </tr>
-    <tr>
-        <td>&lt;noframes&gt;</td>
-        <td>Not supported in HTML5.<br>
-            Defines an alternate content for users that do
-            not support frames</td>
-    </tr>
-    <tr>
-        <td>&lt;noscript&gt;</td>
-        <td>Defines an alternate content for users that do not support
-            client-side scripts</td>
-    </tr>
-    <tr>
-        <td>&lt;object&gt;</td>
-        <td>Defines an embedded object</td>
-    </tr>
-    <tr>
-        <td>&lt;ol&gt;</td>
-        <td>Defines an ordered list</td>
-    </tr>
-    <tr>
-        <td>&lt;optgroup&gt;</td>
-        <td>Defines a group of related options in a drop-down list</td>
-    </tr>
-    <tr>
-        <td>&lt;option&gt;</td>
-        <td>Defines an option in a drop-down list</td>
-    </tr>
-    <tr>
-        <td>&lt;output&gt;</td>
-        <td>Defines the result of a calculation</td>
-    </tr>
-    <tr>
-        <td>&lt;p&gt;</td>
-        <td>Defines a paragraph</td>
-    </tr>
-    <tr>
-        <td>&lt;param&gt;</td>
-        <td>Defines a parameter for an object</td>
-    </tr>
-    <tr>
-        <td>&lt;picture&gt;</td>
-        <td>Defines a container for multiple image resources</td>
-    </tr>
-    <tr>
-        <td>&lt;pre&gt;</td>
-        <td>Defines preformatted text</td>
-    </tr>
-    <tr>
-        <td>&lt;progress&gt;</td>
-        <td>Represents the progress of a task</td>
-    </tr>
-    <tr>
-        <td>&lt;q&gt;</td>
-        <td>Defines a short quotation</td>
-    </tr>
-    <tr>
-        <td>&lt;rp&gt;</td>
-        <td>Defines what to show in browsers that do not support ruby annotations</td>
-    </tr>
-    <tr>
-        <td>&lt;rt&gt;</td>
-        <td>Defines an explanation/pronunciation of characters (for East Asian
-            typography)</td>
-    </tr>
-    <tr>
-        <td>&lt;ruby&gt;</td>
-        <td>Defines a ruby annotation (for East Asian typography)</td>
-    </tr>
-    <tr>
-        <td>&lt;s&gt;</td>
-        <td>Defines text that is no longer correct</td>
-    </tr>
-    <tr>
-        <td>&lt;samp&gt;</td>
-        <td>Defines sample output from a computer program</td>
-    </tr>
-    <tr>
-        <td>&lt;script&gt;</td>
-        <td>Defines a client-side script</td>
-    </tr>
-    <tr>
-        <td>&lt;section&gt;</td>
-        <td>Defines a section in a document</td>
-    </tr>
-    <tr>
-        <td>&lt;select&gt;</td>
-        <td>Defines a drop-down list</td>
-    </tr>
-    <tr>
-        <td>&lt;small&gt;</td>
-        <td>Defines smaller text</td>
-    </tr>
-    <tr>
-        <td>&lt;source&gt;</td>
-        <td>Defines multiple media resources for media elements (&lt;video&gt; and &lt;audio&gt;)</td>
-    </tr>
-    <tr>
-        <td>&lt;span&gt;</td>
-        <td>Defines a section in a document</td>
-    </tr>
-    <tr>
-        <td>&lt;strike&gt;</td>
-        <td>Not supported in HTML5. Use &lt;del&gt; or &lt;s&gt; instead.<br>
-            Defines strikethrough text</td>
-    </tr>
-    <tr>
-        <td>&lt;strong&gt;</td>
-        <td>Defines important text</td>
-    </tr>
-    <tr>
-        <td>&lt;style&gt;</td>
-        <td>Defines style information for a document</td>
-    </tr>
-    <tr>
-        <td>&lt;sub&gt;</td>
-        <td>Defines subscripted text</td>
-    </tr>
-    <tr>
-        <td>&lt;summary&gt;</td>
-        <td>Defines a visible heading for a &lt;details&gt; element</td>
-    </tr>
-    <tr>
-        <td>&lt;sup&gt;</td>
-        <td>Defines superscripted text</td>
-    </tr>
-    <tr>
-        <td>&lt;svg&gt;</td>
-        <td>Defines a container for SVG graphics</td>
-    </tr>
-    <tr>
-        <td>&lt;table&gt;</td>
-        <td>Defines a table</td>
-    </tr>
-    <tr>
-        <td>&lt;tbody&gt;</td>
-        <td>Groups the body content in a table</td>
-    </tr>
-    <tr>
-        <td>&lt;td&gt;</td>
-        <td>Defines a cell in a table</td>
-    </tr>
-    <tr>
-        <td>&lt;template&gt;</td>
-        <td>Defines a template</td>
-    </tr>
-    <tr>
-        <td>&lt;textarea&gt;</td>
-        <td>Defines a multiline input control (text area)</td>
-    </tr>
-    <tr>
-        <td>&lt;tfoot&gt;</td>
-        <td>Groups the footer content in a table</td>
-    </tr>
-    <tr>
-        <td>&lt;th&gt;</td>
-        <td>Defines a header cell in a table</td>
-    </tr>
-    <tr>
-        <td>&lt;thead&gt;</td>
-        <td>Groups the header content in a table</td>
-    </tr>
-    <tr>
-        <td>&lt;time&gt;</td>
-        <td>Defines a date/time</td>
-    </tr>
-    <tr>
-        <td>&lt;title&gt;</td>
-        <td>Defines a title for the document</td>
-    </tr>
-    <tr>
-        <td>&lt;tr&gt;</td>
-        <td>Defines a row in a table</td>
-    </tr>
-    <tr>
-        <td>&lt;track&gt;</td>
-        <td>Defines text tracks for media elements (&lt;video&gt; and &lt;audio&gt;)</td>
-    </tr>
-    <tr>
-        <td>&lt;tt&gt;</td>
-        <td>Not supported in HTML5. Use CSS instead.<br>
-            Defines teletype text</td>
-    </tr>
-    <tr>
-        <td>&lt;u&gt;</td>
-        <td>Defines text that should be stylistically different from normal text</td>
-    </tr>
-    <tr>
-        <td>&lt;ul&gt;</td>
-        <td>Defines an unordered list</td>
-    </tr>
-    <tr>
-        <td>&lt;var&gt;</td>
-        <td>Defines a variable</td>
-    </tr>
-    <tr>
-        <td>&lt;video&gt;</td>
-        <td>Defines a video or movie</td>
-    </tr>
-    <tr>
-        <td>&lt;wbr&gt;</td>
-        <td>Defines a possible line-break</td>
-    </tr>
-</table>
-<h2 id="css">CSS</h2>
+    <h2 id="git">Git & GitHub</h2>
+    <p>
+        <h3>How did viewing a diff between two versions of a file help you see the bug that
+            was introduced?</h3>
+
+        The diff command compares files line by line, while the -u (unified) option, by
+        default, shows 3 lines of unified context to help understand typos, bugs and
+        issues. This command significantly reduced the amount of lines I had to review
+        in order to find the typo.<br>
+
+        <h3>How could having easy access to the entire history of a file make you a more
+            efficient programmer in the long term?</h3>
+
+        Version-control systems (VCS), such as Git, can help a team keep track of who made
+        a change and when. A good commit history shows how algorithms were developed
+        and can provide access to an older working version of your code. Using Git boosts
+        performance, ensures security and offers flexibility when working in a team.<br>
+
+        <h3>What do you think are the pros and cons of manually choosing when to create a
+            commit, like you do in Git, vs having versions automatically saved, like Google
+            docs does?</h3>
+
+        Pros: Manually pushing code on GitHub enables us to test our code first.
+        This helps keep the commit history clean, logical and easy to follow. Git prevents
+        conflicts when changes made by multiple developers override each other.<br>
+        <br>
+        Cons: It is time consuming to manually commit changes and it can lead to a loss of
+        logical flow if commits are inconsistent or have poor descriptions. Version-control
+        can be hard to learn, however once mastered it increases developement speed.<br>
+
+        <h3>Why do you think some version control systems, like Git, allow saving multiple
+            files in one commit, while others, like Google Docs, treat each file separately?</h3>
+
+        Git records changes as a stream of snapshots and acts as a global information
+        tracker for inter-dependant files, which are all part of a project. A logical
+        change can affect multiple files, hence a single commit reflecting changes in
+        multiple files is more appropriate. Git commit history can be accessed offline,
+        whereas the Google Docs history can be accessed online only. Over- or under-commiting
+        can make reverting to a previous version of your code harder. Google docs, by
+        contrast, is a tool used for creating single independent files.<br>
+
+        <h3>How can you use the commands git log and git diff to view the history of files?</h3>
+
+        Git log shows the whole log history (all commits) for all files, while git diff
+        shows changes between commits, commit and working tree, etc. and allows to look at
+        specific changes line by line.<br>
+
+        <h3>How might using version control make you more confident to make changes that
+            could break something?</h3>
+
+        Keeping track of changes helps understand when and why code breaks, as well as
+        who introduced the 'faulty' change. Having a back-up allows developers to revert to
+        a stable version of the code, ensuring the usability of a project until a better
+        working version is released.<br>
+
+        <h3>Now that you have your workspace set up, what do you want to try using Git for?</h3>
+
+        I would like to keep track of my work and progress, as well as collaborate in group
+        projects.<br>
+    </p>
+    <h4>Git commands</h4>
+    <table>
+        <tr>
+            <td><b>COMMAND</b></td>
+            <td><b>ACTION</b></td>
+        </tr>
+        <tr>
+            <td>git --version</td>
+            <td>Check if git is installed and which version</td>
+        </tr>
+        <tr>
+            <td>sudo apt-get update<br>
+                sudo apt-get install git</td>
+            <td>Install git on Ubuntu</td>
+        </tr>
+        <tr>
+            <td>git config --global user.name "FirstName LastName"</td>
+            <td>Configure git name<br>
+                These details will be associated with any commits that you create</td>
+        </tr>
+        <tr>
+            <td>git config --global user.email "email@example.com"</td>
+            <td>Configure git email</td>
+        </tr>
+        <tr>
+            <td>git config --global color.ui auto</td>
+            <td>Configure git to get colored diff output</td>
+        </tr>
+        <tr>
+            <td>git clone</td>
+            <td>Clone an entire rpository with its history on your local machine</td>
+        </tr>
+        <tr>
+            <td>git log</td>
+            <td>Show commit logs</td>
+        </tr>
+        <tr>
+            <td>git diff</td>
+            <td>Show changes between commits, commit and working tree, etc</td>
+        </tr>
+        <tr>
+            <td>git status</td>
+            <td>Show the working tree status</td>
+        </tr>
+        <tr>
+            <td>git checkout</td>
+            <td>Switch branches or restore working tree files</td>
+        </tr>
+        <tr>
+            <td>git init</td>
+            <td>Create an empty Git repository or reinitialize an existing one</td>
+        </tr>
+        <tr>
+            <td>git add</td>
+            <td>Add file contents to the index ("the staging area") to be committed
+        </tr>
+        <tr>
+            <td>git commit -m'description'</td>
+            <td>Record/commit changes to the repository and add message</td>
+        </tr>
+        <tr>
+            <td>git push</td>
+            <td>Update/push remote refs along with associated objects</td>
+        </tr>
+        <tr>
+            <td>touch .gitignore<br>
+                touch password.txt</td>
+            <td>Create a file with sensitive data and a .gitignore file for the files
+                you do not wish git keep track of or commit</td>
+        </tr>
+        <tr>
+            <td>echo 'password.txt' >> .gitignore</td>
+            <td>Add your sensitive file to be ignored into the .gitignore file</td>
+        </tr>
+    </table>
+    <h2 id="md">Markdown</h2>
+    <div class="md-table">
+        <table>
+            <tr>
+                <td><b>FORMATTING</b></td>
+                <td><b>OUTPUT</b></td>
+            </tr>
+            <tr>
+                <td>**This is bold**</td>
+                <td><b>This is bold</b></td>
+            </tr>
+            <tr>
+                <td>_This is italic_</td>
+                <td><i>This is italic</i></td>
+            </tr>
+            <tr>
+                <td>**_This is bold and italic_**</td>
+                <td><b><i>This is bold and italic</i></b></td>
+            </tr>
+            <tr>
+                <td># Header one</td>
+                <td>
+                    <h1>Header one</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>## Header two</td>
+                <td>
+                    <h2>Header two</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>### Header three</td>
+                <td>
+                    <h3>Header three</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>#### Header four</td>
+                <td>
+                    <h4>Header four</h4>
+                </td>
+            </tr>
+            <tr>
+                <td>##### Header five</td>
+                <td>
+                    <h5>Header five</h5>
+                </td>
+            </tr>
+            <tr>
+                <td>###### Header six</td>
+                <td>
+                    <h6>Header six</h6>
+                </td>
+            </tr>
+            <tr>
+                <td>[Search for it](https://www.google.com/)</td>
+                <td><a href="https://www.google.com/" target="_blank">Search for it</a></td>
+            </tr>
+            <tr>
+                <td>Click here for [Google][my_reference]<br>
+                    [my_reference]:https://www.google.com/</td>
+                <td>Click here for <a href="https://www.google.com/" target="_blank">Google</a></td>
+            </tr>
+            <tr>
+                <td>![GitHub Logo](https://avatars1.githubusercontent.com/u/9919?s=200&v=4)</td>
+                <td><img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4"></td>
+            </tr>
+            <tr>
+                <td>![GitHub Logo][logo]<br>
+                    [logo]:https://avatars1.githubusercontent.com/u/9919?s=200&v=4</td>
+                <td><img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4"></td>
+            </tr>
+            <tr>
+                <td>> "Insert your quote."</td>
+                <td>
+                    <blockquote class="blockquote">
+                        "Insert your quote."
+                    </blockquote>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    * Eggs<br>
+                    * Bacon<br>
+                    * Milk<br>
+                </td>
+                <td>
+                    <uo>
+                        <li>Eggs</li>
+                        <li>Bacon</li>
+                        <li>Milk</li>
+                    </uo>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1. Code<br>
+                    2. Test<br>
+                    3. Repeat<br>
+                </td>
+                <td>
+                    <ol>
+                        <li>Code</li>
+                        <li>Test</li>
+                        <li>Repeat</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1. Some heading<br>
+                    <pre> Some paragraph</pre>
+                </td>
+                <td>
+                    1. Some heading<br>
+                    <p>Some paragraph</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <h2 id="html">HTML</h2>
+    <img src="https://almosthumor.files.wordpress.com/2011/09/html5demo1.jpg" alt="semantic HTML chart">
+    <table>
+        <tr>
+            <th>Tag</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>&lt;!--...--&gt;</td>
+            <td>Defines a comment</td>
+        </tr>
+        <tr>
+            <td>&lt;!DOCTYPE&gt;&nbsp;</td>
+            <td>Defines the document type</td>
+        </tr>
+        <tr>
+            <td>&lt;a&gt;</td>
+            <td>Defines a hyperlink</td>
+        </tr>
+        <tr>
+            <td>&lt;abbr&gt;</td>
+            <td>Defines an abbreviation or an acronym</td>
+        </tr>
+        <tr>
+            <td>&lt;acronym&gt;</td>
+            <td>Not supported in HTML5. Use &lt;abbr&gt; instead.<br>
+                Defines an acronym</td>
+        </tr>
+        <tr>
+            <td>&lt;address&gt;</td>
+            <td>Defines contact information for the author/owner of a document</td>
+        </tr>
+        <tr>
+            <td>&lt;applet&gt;</td>
+            <td>Not supported in HTML5. Use &lt;embed&gt; or &lt;object&gt; instead.<br>
+                Defines an embedded applet</td>
+        </tr>
+        <tr>
+            <td>&lt;area&gt;</td>
+            <td>Defines an area inside an image-map</td>
+        </tr>
+        <tr>
+            <td>&lt;article&gt;</td>
+            <td>Defines an article</td>
+        </tr>
+        <tr>
+            <td>&lt;aside&gt;</td>
+            <td>Defines content aside from the page content</td>
+        </tr>
+        <tr>
+            <td>&lt;audio&gt;</td>
+            <td>Defines sound content</td>
+        </tr>
+        <tr>
+            <td>&lt;b&gt;</td>
+            <td>Defines bold text</td>
+        </tr>
+        <tr>
+            <td>&lt;base&gt;</td>
+            <td>Specifies the base URL/target for all relative URLs in a document</td>
+        </tr>
+        <tr>
+            <td>&lt;basefont&gt;</td>
+            <td>Not supported in HTML5. Use CSS instead.<br>
+                Specifies a default color, size, and font for all text in a document</td>
+        </tr>
+        <tr>
+            <td>&lt;bdi&gt;</td>
+            <td>Isolates a part of text that might be formatted in a different direction
+                from other text outside it</td>
+        </tr>
+        <tr>
+            <td>&lt;bdo&gt;</td>
+            <td>Overrides the current text direction</td>
+        </tr>
+        <tr>
+            <td>&lt;big&gt;</td>
+            <td>Not supported in HTML5. Use CSS instead.<br>
+                Defines big text</td>
+        </tr>
+        <tr>
+            <td>&lt;blockquote&gt;</td>
+            <td>Defines a section that is quoted from another source</td>
+        </tr>
+        <tr>
+            <td>&lt;body&gt;</td>
+            <td>Defines the document's body</td>
+        </tr>
+        <tr>
+            <td>&lt;br&gt;</td>
+            <td>Defines a single line break</td>
+        </tr>
+        <tr>
+            <td>&lt;button&gt;</td>
+            <td>Defines a clickable button</td>
+        </tr>
+        <tr>
+            <td>&lt;canvas&gt;</td>
+            <td>Used to draw graphics, on the fly, via scripting (usually JavaScript)</td>
+        </tr>
+        <tr>
+            <td>&lt;caption&gt;</td>
+            <td>Defines a table caption</td>
+        </tr>
+        <tr>
+            <td>&lt;center&gt;</td>
+            <td>Not supported in HTML5. Use CSS instead.<br>
+                Defines centered text</td>
+        </tr>
+        <tr>
+            <td>&lt;cite&gt;</td>
+            <td>Defines the title of a work</td>
+        </tr>
+        <tr>
+            <td>&lt;code&gt;</td>
+            <td>Defines a piece of computer code</td>
+        </tr>
+        <tr>
+            <td>&lt;col&gt;</td>
+            <td>Specifies column properties for each column within a &lt;colgroup&gt; element&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&lt;colgroup&gt;</td>
+            <td>Specifies a group of one or more columns in a table for formatting</td>
+        </tr>
+        <tr>
+            <td>&lt;data&gt;</td>
+            <td>Links the given content with a machine-readable translation</td>
+        </tr>
+        <tr>
+            <td>&lt;datalist&gt;</td>
+            <td>Specifies a list of pre-defined options for input controls</td>
+        </tr>
+        <tr>
+            <td>&lt;dd&gt;</td>
+            <td>Defines a description/value of a term in a description list</td>
+        </tr>
+        <tr>
+            <td>&lt;del&gt;</td>
+            <td>Defines text that has been deleted from a document</td>
+        </tr>
+        <tr>
+            <td>&lt;details&gt;</td>
+            <td>Defines additional details that the user can view or hide</td>
+        </tr>
+        <tr>
+            <td>&lt;dfn&gt;</td>
+            <td>Represents the defining instance of a term</td>
+        </tr>
+        <tr>
+            <td>&lt;dialog&gt;</td>
+            <td>Defines a dialog box or window</td>
+        </tr>
+        <tr>
+            <td>&lt;dir&gt;</td>
+            <td>Not supported in HTML5. Use &lt;ul&gt; instead.<br>
+                Defines a directory list</td>
+        </tr>
+        <tr>
+            <td>&lt;div&gt;</td>
+            <td>Defines a section in a document</td>
+        </tr>
+        <tr>
+            <td>&lt;dl&gt;</td>
+            <td>Defines a description list</td>
+        </tr>
+        <tr>
+            <td>&lt;dt&gt;</td>
+            <td>Defines a term/name in a description list</td>
+        </tr>
+        <tr>
+            <td>&lt;em&gt;</td>
+            <td>Defines emphasized text&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&lt;embed&gt;</td>
+            <td>Defines a container for an external (non-HTML) application</td>
+        </tr>
+        <tr>
+            <td>&lt;fieldset&gt;</td>
+            <td>Groups related elements in a form</td>
+        </tr>
+        <tr>
+            <td>&lt;figcaption&gt;</td>
+            <td>Defines a caption for a &lt;figure&gt; element</td>
+        </tr>
+        <tr>
+            <td>&lt;figure&gt;</td>
+            <td>Specifies self-contained content</td>
+        </tr>
+        <tr>
+            <td>&lt;font&gt;</td>
+            <td>Not supported in HTML5. Use CSS instead.<br>
+                Defines font, color, and size for text</td>
+        </tr>
+        <tr>
+            <td>&lt;footer&gt;</td>
+            <td>Defines a footer for a document or section</td>
+        </tr>
+        <tr>
+            <td>&lt;form&gt;</td>
+            <td>Defines an HTML form for user input</td>
+        </tr>
+        <tr>
+            <td>&lt;frame&gt;</td>
+            <td>Not supported in HTML5.<br>
+                Defines a window (a frame) in a frameset</td>
+        </tr>
+        <tr>
+            <td>&lt;frameset&gt;</td>
+            <td>Not supported in HTML5.<br>
+                Defines a set of frames</td>
+        </tr>
+        <tr>
+            <td>&lt;h1&gt; to &lt;h6&gt;</td>
+            <td>Defines HTML headings</td>
+        </tr>
+        <tr>
+            <td>&lt;head&gt;</td>
+            <td>Defines information about the document</td>
+        </tr>
+        <tr>
+            <td>&lt;header&gt;</td>
+            <td>Defines a header for a document or section</td>
+        </tr>
+        <tr>
+            <td>&lt;hr&gt;</td>
+            <td>Defines a thematic change in the content</td>
+        </tr>
+        <tr>
+            <td>&lt;html&gt;</td>
+            <td>Defines the root of an HTML document</td>
+        </tr>
+        <tr>
+            <td>&lt;i&gt;</td>
+            <td>Defines a part of text in an alternate voice or mood</td>
+        </tr>
+        <tr>
+            <td>&lt;iframe&gt;</td>
+            <td>Defines an inline frame</td>
+        </tr>
+        <tr>
+            <td>&lt;img&gt;</td>
+            <td>Defines an image</td>
+        </tr>
+        <tr>
+            <td>&lt;input&gt;</td>
+            <td>Defines an input control</td>
+        </tr>
+        <tr>
+            <td>&lt;ins&gt;</td>
+            <td>Defines a text that has been inserted into a document</td>
+        </tr>
+        <tr>
+            <td>&lt;kbd&gt;</td>
+            <td>Defines keyboard input</td>
+        </tr>
+        <tr>
+            <td>&lt;label&gt;</td>
+            <td>Defines a label&nbsp;for an &lt;input&gt; element</td>
+        </tr>
+        <tr>
+            <td>&lt;legend&gt;</td>
+            <td>Defines a caption for a &lt;fieldset&gt; element</td>
+        </tr>
+        <tr>
+            <td>&lt;li&gt;</td>
+            <td>Defines a list item</td>
+        </tr>
+        <tr>
+            <td>&lt;link&gt;</td>
+            <td>Defines the relationship between a document and an external resource (most
+                used to link to style sheets)</td>
+        </tr>
+        <tr>
+            <td>&lt;main&gt;</td>
+            <td>Specifies the main content of a document</td>
+        </tr>
+        <tr>
+            <td>&lt;map&gt;</td>
+            <td>Defines a client-side image-map</td>
+        </tr>
+        <tr>
+            <td>&lt;mark&gt;</td>
+            <td>Defines marked/highlighted text</td>
+        </tr>
+        <tr>
+            <td>&lt;meta&gt;</td>
+            <td>Defines metadata about an HTML document</td>
+        </tr>
+        <tr>
+            <td>&lt;meter&gt;</td>
+            <td>Defines a scalar measurement within a known range (a gauge)</td>
+        </tr>
+        <tr>
+            <td>&lt;nav&gt;</td>
+            <td>Defines navigation links</td>
+        </tr>
+        <tr>
+            <td>&lt;noframes&gt;</td>
+            <td>Not supported in HTML5.<br>
+                Defines an alternate content for users that do
+                not support frames</td>
+        </tr>
+        <tr>
+            <td>&lt;noscript&gt;</td>
+            <td>Defines an alternate content for users that do not support
+                client-side scripts</td>
+        </tr>
+        <tr>
+            <td>&lt;object&gt;</td>
+            <td>Defines an embedded object</td>
+        </tr>
+        <tr>
+            <td>&lt;ol&gt;</td>
+            <td>Defines an ordered list</td>
+        </tr>
+        <tr>
+            <td>&lt;optgroup&gt;</td>
+            <td>Defines a group of related options in a drop-down list</td>
+        </tr>
+        <tr>
+            <td>&lt;option&gt;</td>
+            <td>Defines an option in a drop-down list</td>
+        </tr>
+        <tr>
+            <td>&lt;output&gt;</td>
+            <td>Defines the result of a calculation</td>
+        </tr>
+        <tr>
+            <td>&lt;p&gt;</td>
+            <td>Defines a paragraph</td>
+        </tr>
+        <tr>
+            <td>&lt;param&gt;</td>
+            <td>Defines a parameter for an object</td>
+        </tr>
+        <tr>
+            <td>&lt;picture&gt;</td>
+            <td>Defines a container for multiple image resources</td>
+        </tr>
+        <tr>
+            <td>&lt;pre&gt;</td>
+            <td>Defines preformatted text</td>
+        </tr>
+        <tr>
+            <td>&lt;progress&gt;</td>
+            <td>Represents the progress of a task</td>
+        </tr>
+        <tr>
+            <td>&lt;q&gt;</td>
+            <td>Defines a short quotation</td>
+        </tr>
+        <tr>
+            <td>&lt;rp&gt;</td>
+            <td>Defines what to show in browsers that do not support ruby annotations</td>
+        </tr>
+        <tr>
+            <td>&lt;rt&gt;</td>
+            <td>Defines an explanation/pronunciation of characters (for East Asian
+                typography)</td>
+        </tr>
+        <tr>
+            <td>&lt;ruby&gt;</td>
+            <td>Defines a ruby annotation (for East Asian typography)</td>
+        </tr>
+        <tr>
+            <td>&lt;s&gt;</td>
+            <td>Defines text that is no longer correct</td>
+        </tr>
+        <tr>
+            <td>&lt;samp&gt;</td>
+            <td>Defines sample output from a computer program</td>
+        </tr>
+        <tr>
+            <td>&lt;script&gt;</td>
+            <td>Defines a client-side script</td>
+        </tr>
+        <tr>
+            <td>&lt;section&gt;</td>
+            <td>Defines a section in a document</td>
+        </tr>
+        <tr>
+            <td>&lt;select&gt;</td>
+            <td>Defines a drop-down list</td>
+        </tr>
+        <tr>
+            <td>&lt;small&gt;</td>
+            <td>Defines smaller text</td>
+        </tr>
+        <tr>
+            <td>&lt;source&gt;</td>
+            <td>Defines multiple media resources for media elements (&lt;video&gt; and &lt;audio&gt;)</td>
+        </tr>
+        <tr>
+            <td>&lt;span&gt;</td>
+            <td>Defines a section in a document</td>
+        </tr>
+        <tr>
+            <td>&lt;strike&gt;</td>
+            <td>Not supported in HTML5. Use &lt;del&gt; or &lt;s&gt; instead.<br>
+                Defines strikethrough text</td>
+        </tr>
+        <tr>
+            <td>&lt;strong&gt;</td>
+            <td>Defines important text</td>
+        </tr>
+        <tr>
+            <td>&lt;style&gt;</td>
+            <td>Defines style information for a document</td>
+        </tr>
+        <tr>
+            <td>&lt;sub&gt;</td>
+            <td>Defines subscripted text</td>
+        </tr>
+        <tr>
+            <td>&lt;summary&gt;</td>
+            <td>Defines a visible heading for a &lt;details&gt; element</td>
+        </tr>
+        <tr>
+            <td>&lt;sup&gt;</td>
+            <td>Defines superscripted text</td>
+        </tr>
+        <tr>
+            <td>&lt;svg&gt;</td>
+            <td>Defines a container for SVG graphics</td>
+        </tr>
+        <tr>
+            <td>&lt;table&gt;</td>
+            <td>Defines a table</td>
+        </tr>
+        <tr>
+            <td>&lt;tbody&gt;</td>
+            <td>Groups the body content in a table</td>
+        </tr>
+        <tr>
+            <td>&lt;td&gt;</td>
+            <td>Defines a cell in a table</td>
+        </tr>
+        <tr>
+            <td>&lt;template&gt;</td>
+            <td>Defines a template</td>
+        </tr>
+        <tr>
+            <td>&lt;textarea&gt;</td>
+            <td>Defines a multiline input control (text area)</td>
+        </tr>
+        <tr>
+            <td>&lt;tfoot&gt;</td>
+            <td>Groups the footer content in a table</td>
+        </tr>
+        <tr>
+            <td>&lt;th&gt;</td>
+            <td>Defines a header cell in a table</td>
+        </tr>
+        <tr>
+            <td>&lt;thead&gt;</td>
+            <td>Groups the header content in a table</td>
+        </tr>
+        <tr>
+            <td>&lt;time&gt;</td>
+            <td>Defines a date/time</td>
+        </tr>
+        <tr>
+            <td>&lt;title&gt;</td>
+            <td>Defines a title for the document</td>
+        </tr>
+        <tr>
+            <td>&lt;tr&gt;</td>
+            <td>Defines a row in a table</td>
+        </tr>
+        <tr>
+            <td>&lt;track&gt;</td>
+            <td>Defines text tracks for media elements (&lt;video&gt; and &lt;audio&gt;)</td>
+        </tr>
+        <tr>
+            <td>&lt;tt&gt;</td>
+            <td>Not supported in HTML5. Use CSS instead.<br>
+                Defines teletype text</td>
+        </tr>
+        <tr>
+            <td>&lt;u&gt;</td>
+            <td>Defines text that should be stylistically different from normal text</td>
+        </tr>
+        <tr>
+            <td>&lt;ul&gt;</td>
+            <td>Defines an unordered list</td>
+        </tr>
+        <tr>
+            <td>&lt;var&gt;</td>
+            <td>Defines a variable</td>
+        </tr>
+        <tr>
+            <td>&lt;video&gt;</td>
+            <td>Defines a video or movie</td>
+        </tr>
+        <tr>
+            <td>&lt;wbr&gt;</td>
+            <td>Defines a possible line-break</td>
+        </tr>
+    </table>
+    <h2 id="css">CSS</h2>
 </main>
 <script src="script.js"></script>
 
