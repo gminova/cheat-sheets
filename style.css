@@ -54,6 +54,7 @@ body {
     width: 350px;
     border-top: solid orange 5px;
     border-bottom: solid orange 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .menu-link {
@@ -80,11 +81,15 @@ table {
 table,
 th,
 td {
-    font-family: 'Source Code Pro', monospace;
-    border: 2px solid lightgray;
+    background-color: #2C001E;
+    color: #F6F6F5;
+    font: 1.3rem 'Ubuntu', monospace;
+    border-left: hidden;
+    border-right: 5px solid orange;
     border-collapse: collapse;
     text-align: left;
     table-layout: fixed;
+    padding: 8px;
 }
 
 .blockquote {
