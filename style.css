@@ -1,3 +1,22 @@
+/*TABLET MEDIA QUERY*/
+@media screen and (max-width: 1000px) {
+    .menu {
+        font-size: 3rem;
+        line-height: 55pt;
+        width: 500px;
+    }
+}
+
+/*MOBILE MEDIA QUERY*/
+
+@media screen and (max-width: 690px) {
+    .menu {
+        font-size: 3.5rem;
+        line-height: 65pt;
+        width: 550px;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -34,7 +53,7 @@ body {
 }
 
 .menu {
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: bold;
     display: none;
     height: 100%;
@@ -47,13 +66,13 @@ body {
     list-style-type: none;
     vertical-align: top;
     text-align: right;
-    line-height: 65pt;
+    line-height: 45pt;
     background: lightgray;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.9);
     color: white;
     opacity: 0.8;
-    width: 500px;
+    width: 350px;
     border-top: solid orange 5px;
     border-bottom: solid orange 5px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -71,7 +90,8 @@ body {
     color: orange;
 }
 
-main, table {
+main,
+table {
     margin: 0 auto;
 }
 
