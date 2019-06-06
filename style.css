@@ -39,28 +39,32 @@ body {
     float: right;
     top: 0;
     right: 0;
-    padding: 10px 10px;
+    padding: 10px 50px;
     position: fixed;
     z-index: 100;
     list-style-type: none;
     vertical-align: top;
     text-align: right;
+    line-height: 35pt;
     background: lightgray;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.9);
     color: white;
     opacity: 0.8;
+    width: 350px;
+    border-top: solid orange 5px;
+    border-bottom: solid orange 5px;
 }
 
 .menu-link {
     color: white;
     text-decoration: none;
     text-transform: UPPERCASE;
-    border-bottom: solid orange 1px;
 }
 
 .menu-link:hover,
-.close-nav:hover {
+.close-nav:hover,
+.menu-btn:hover {
     color: orange;
 }
 
