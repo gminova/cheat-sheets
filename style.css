@@ -12,12 +12,6 @@ body {
     max-width: 1200px;
     text-align: justify;
 }
-#css{
-    color: green;
-}
-h5{
-    color: pink;
-}
 
 .menu-btn {
     display: block;
