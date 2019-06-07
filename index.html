@@ -946,7 +946,67 @@
             <td>Defines a possible line-break</td>
         </tr>
     </table>
-    <h2 id="css">CSS</h2>
+    <h2 id="css" class="csss">CSS</h2>
+    <table>
+        <tr>
+            <td><b>RULE PRIORITY (weak to strong)</b></td>
+            <td><b>COMMENT</b></td>
+        <tr>
+            <td>*</td>
+            <td>The universal selector and inherited values have a specificity of 0
+                (e.g. *, body and similar) have a zero specificity.
+        </tr>
+        <tr>
+            <td>type/attribute selector {property:value;}</td>
+            <td>e.g. h1, p, etc.</td>
+        </tr>
+        <tr>
+            <td>From external CSS file: h1 {color: red;}
+                <br>
+                <br>
+                In HTML file: h1 {color: yellow;}
+            </td>
+            <td>Contextual selectors are more specific than a single element selector.</td>
+        </tr>
+        <tr>
+            <td>.class {property:value;}</td>
+            <td>Often used for styling.</td>
+        </tr>
+        <tr>
+            <td>#id {property:value;}</td>
+            <td>Often used for JS functions.</td>
+        </tr>
+        <tr>
+            <td>type selector(e.g. h1) {property:value !important;}</td>
+            <td>Adding !important is useful to prevent libraries, like Bootstrap
+                overriding important rules.
+            </td>
+        </tr>
+        <tr>
+            <td>.class {property:value !important;}</td>
+            <td>.class is stronger than type selector if both are !important</td>
+        </tr>
+        <tr>
+            <td>#id {property:value !important;}</td>
+            <td>This rule is quite strong!</td>
+        </tr>
+        <tr>
+            <td>#id {property:value !important;}</td>
+            <td>However this rule is even stronger, as it overrides its twin above.</td>
+        </tr>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <td><b>SELECTOR {PROPERTY:VALUE;}</b></td>
+            <td><b>EFFECT</b></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
 </main>
 <script src="script.js"></script>
 
