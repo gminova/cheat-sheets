@@ -992,7 +992,9 @@
         </tr>
         <tr>
             <td>#id {property:value !important;}</td>
-            <td>However, this rule is even stronger, as it overrides its twin above.</td>
+            <td>However, this rule is even stronger, as it overrides its twin above.
+                CSS is read from top to bottom and in conflicts, last declared rule wins.
+            </td>
         </tr>
         </tr>
     </table>
@@ -1018,7 +1020,7 @@
         </tr>
         <tr>
             <td>position: relative;</td>
-            <td>A relative positioned element is positionedn relative to its normal
+            <td>A relative positioned element is positioned relative to its normal
                 position.</td>
         </tr>
         <tr>
@@ -1036,7 +1038,7 @@
         </tr>
         <tr>
             <td>visibility: hidden;</td>
-            <td>This propery hides an element but it's position remain, affecting
+            <td>This propery hides an element but it's position remains, affecting
                 the layout as if it was there.
             </td>
         </tr>
@@ -1057,8 +1059,36 @@
             <td>Use to position elements in a flexible way.</td>
         </tr>
         <tr>
-            <td>display: grid;</td>
-            <td></td>
+            <td>flex-direction: row;</td>
+            <td>Use to position elements in a row (or column).</td>
+        </tr>
+        <tr>
+            <td>flex-direction: row-reverse;</td>
+            <td>Use to position elements in a reversed row (or reversed column).</td>
+        </tr>
+        <tr>
+            <td>align-items: flex-start | flex-end | center | baseline | stretch
+                | space-between | space-around</td>
+            <td>Controls alignment of all items on the cross axis.</td>
+        </tr>
+        <tr>
+            <td>align-content: flex-start | flex-end | center | stretch
+                | space-between | space-around | space-evenly</td>
+            <td>Used for controlling the space between flex lines on the cross axis.</td>
+        </tr>
+        <tr>
+            <td>align-self</td>
+            <td>Controls alignment of an individual flex item on the cross axis.</td>
+        </tr>
+        <tr>
+        <tr>
+            <td>justify-content: start | center | end | left | right | normal |
+                space-between | space-around | space-evenly | strech |
+                flex-start | flex-evenly</td>
+            <td>Controls alignment of all items on the main axis.</td>
+        </tr>
+        <td>display: grid;</td>
+        <td></td>
         </tr>
     </table>
 </main>
