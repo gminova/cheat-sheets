@@ -1180,7 +1180,98 @@
             <td>Use to order items. The value is a number.</td>
         </tr>
         <td>display: grid;</td>
-        <td></td>
+        <td>Grid, the parent element is referred to as the container and its children
+            are called items.</td>
+        </tr>
+        <tr>
+            <td>grid-template-columns: 50px 50px;</td>
+            <td>This will give your grid two columns that are 50px wide each.</td>
+        </tr>
+        <tr>
+            <td>grid-template-rows: 100px 100px 100px;</td>
+            <td>This will give your grid three rows that are 100px tall each.</td>
+        </tr>
+        <tr>
+            <td>grid-template-columns: auto 50px 10% 2fr 1fr;</td>
+            <td>This snippet creates five columns. The first column is as wide as its
+                content, the second column is 50px, the third column is 10% of its
+                container, and for the last two columns; the remaining space is divided
+                into three sections, two are allocated for the fourth column, and one for
+                the fifth.</td>
+        </tr>
+        <tr>
+            <td>grid-column-gap: 10px;</td>
+            <td>This creates 10px of empty space between all columns.</td>
+        </tr>
+        <tr>
+            <td>grid-row-gap: 10px;</td>
+            <td>This creates 10px of empty space between all rows.</td>
+        </tr>
+        <tr>
+            <td>grid-gap: 10px 20px;</td>
+            <td>Introduce a 10px gap between the rows and 20px gap between the columns.</td>
+        </tr>
+        <tr>
+            <td>grid-column: 1/3;</td>
+            <td>This will make the item start at the first vertical line of the grid on
+                the left and span to the 3rd line of the grid, consuming two columns.</td>
+        </tr>
+        <tr>
+            <td>grid-row: 2/4;</td>
+            <td>This will make the item consume the last two rows.</td>
+        </tr>
+        <tr>
+            <td>justify-self</td>
+            <td>Align the content's position within its cell horizontally.</td>
+        </tr>
+        <tr>
+            <td>justify-items: stretch | center | start | end;</td>
+            <td>Align all grid items's position horizontally.</td>
+        </tr>
+        <tr>
+            <td>grid-template-areas:
+                <pre>
+                    "a a ."
+                    "a a ."
+                    ". b c";</pre>
+            </td>
+            <td>After creating an areas template for your grid container
+                you can place an item in your custom area by referencing
+                the name you gave it.</td>
+        </tr>
+        <tr>
+            <td>grid-area: 3/1/4/4;</td>
+            <td>Place the element with between the third and fourth horizontal lines
+                and between the first and fourth vertical lines.</td>
+        </tr>
+        <tr>
+            <td>grid-template-rows: repeat(100, 50px);</td>
+            <td>Create a 100 row grid, each row at 50px tall.</td>
+        </tr>
+        <tr>
+            <td>grid-template-columns: 100px minmax(50px, 200px);</td>
+            <td>Create two columns; the first is 100px wide, and the second has the
+                minimum width of 50px and the maximum width of 200px.</td>
+        </tr>
+        <tr>
+            <td>repeat(auto-fill, minmax(60px, 1fr));</td>
+            <td>When the container changes size, this setup keeps inserting
+                60px columns and stretching them until it can insert another one.</td>
+        </tr>
+        <tr>
+            <td>
+                <pre>@media (min-width: 400px){
+                    .container{                    
+                      grid-template-areas:
+                        "header header"
+                        "advert content"
+                        "footer footer";
+                    }
+                  }</pre>
+            </td>
+            <td>When the viewport width is 400px or more, make the header area occupy 
+                the top row completely and the footer area occupy the bottom row 
+                completely.</td>
         </tr>
     </table>
 </main>
