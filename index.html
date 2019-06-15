@@ -1287,7 +1287,7 @@
         </tr>
         <tr>
             <td>document.getElementById('idName')</td>
-            <td>Returns just one element (every element should have a unique ID,
+            <td>Returns just one element (every element should have a unique ID),
                 so there should only ever be one element to return.</td>
         </tr>
         <tr>
@@ -1321,7 +1321,7 @@
             <td>document.querySelector('#square').classList.add('red');</td>
             <td>Finds an element and adds a specific class if it exists, otherwise
                 it returns undefined.
-            <td>
+            </td>
         </tr>
         <tr>
             <td>document.createTextNode('Some new text');</td>
@@ -1341,7 +1341,7 @@
         </tr>
         <tr>
             <td>element.replaceChild(newNode, oldNode);</td>
-            <td>Replaces a one node with a new one.</td>
+            <td>Replaces a node with a new one.</td>
         </tr>
         <tr>
             <td>document.createElement(element);</td>
@@ -1365,8 +1365,8 @@
         </tr>
         <tr>
             <td>
-                <pre>var time = document.getElementById('button');
-                    time.onclick = function () {
+                <pre>var date = document.getElementById('button');
+                    date.onclick = function () {
                     document.body.innerHTML = Date();
                 }
             </pre>
