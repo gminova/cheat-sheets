@@ -113,6 +113,54 @@ td {
     padding: 10px 20px;
 }
 
+/*CALCULATOR*/
+.container {
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    align-items: center;
+    text-align: center;
+    background: lightGray;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+button {
+    font-size: 28px;
+    min-width: 50px;
+    height: 40px;
+    width: 60px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(145, 139, 139, 0.23);
+    margin: 3px auto;
+}
+
+#reset {
+    width: 195px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+#txt {
+    font-size: 28px;
+    width: 240px;
+    padding: 3px;
+    border-radius: 10px;
+    margin-bottom: 1.5em;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+#result {
+    margin-bottom: 1em;
+    font-size: 28px;
+    padding: 3px;
+    width: 144px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
 /*TABLET MEDIA QUERY*/
 @media screen and (max-width: 1000px) {
     .menu {
