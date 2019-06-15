@@ -253,7 +253,7 @@
         I would like to keep track of my work and progress, as well as collaborate in group
         projects.<br>
     </p>
-    <h4>Git commands</h4>
+    <h3>Git commands</h3>
     <table>
         <tr>
             <td><b>COMMAND</b></td>
@@ -361,7 +361,7 @@
         </tr>
     </table>
     <br>
-    <h4>Using SSH</h4>
+    <h3>Using SSH</h3>
     <table>
         <tr>
             <td><b>COMMAND</b></td>
@@ -1269,9 +1269,119 @@
                     }
                   }</pre>
             </td>
-            <td>When the viewport width is 400px or more, make the header area occupy 
-                the top row completely and the footer area occupy the bottom row 
+            <td>When the viewport width is 400px or more, make the header area occupy
+                the top row completely and the footer area occupy the bottom row
                 completely.</td>
+        </tr>
+    </table>
+    <h2 id="dom">DOM (Document Object Model)</h2>
+    <table>
+        <tr>
+            <td><b>FUNCTION</b></td>
+            <td><b>EFFECT</b></td>
+        </tr>
+        <tr>
+            <td>document.body.innerHTML = 'Hello, there!';</td>
+            <td>A body is an element of the DOM, we can access it using the document
+                object and change the content of the innerHTML property.</td>
+        </tr>
+        <tr>
+            <td>document.getElementById('idName')</td>
+            <td>Returns just one element (every element should have a unique ID,
+                so there should only ever be one element to return.</td>
+        </tr>
+        <tr>
+            <td>document.querySelector('#square')</td>
+            <td>It takes any CSS selector and queries the contents of the DOM.
+                It returns one result.</td>
+        </tr>
+        <tr>
+            <td>document.querySelectorAll('.red')</td>
+            <td>Returns all elements with the class red as a NodeList.
+                This looks very similar to an array,
+                but you won't be able to use array methods on it such as map and reduce.
+                You can access each item using an index, e.g. myNodeList[0], and you can
+                iterate over it using a for loop or using forEach().</td>
+        </tr>
+        <tr>
+            <td>document.getElementsByClassName('className')</td>
+            <td>Returns an array of all elements with a certain class name.</td>
+        </tr>
+        <tr>
+            <td>document.getElementsByTagName('tagName')</td>
+            <td>Returns an array of all elements with a certain tag name.</td>
+        </tr>
+        <tr>
+            <td>document.querySelector('#square').classList.remove('blue');</td>
+            <td>Finds an element and removes a specific class if it exists, otherwise
+                it returns undefined.
+            <td>
+        </tr>
+        <tr>
+            <td>document.querySelector('#square').classList.add('red');</td>
+            <td>Finds an element and adds a specific class if it exists, otherwise
+                it returns undefined.
+            <td>
+        </tr>
+        <tr>
+            <td>document.createTextNode('Some new text');</td>
+            <td>Creates new text node.</td>
+        </tr>
+        <tr>
+            <td>element.appendChild(newNode);</td>
+            <td>Adds a new child node to an element as the last child node.</td>
+        </tr>
+        <tr>
+            <td>element.insertBefore(node1, node2);</td>
+            <td>Inserts node1 as a child before node2.</td>
+        </tr>
+        <tr>
+            <td>element.removeChild(childNode);</td>
+            <td>Removes a child node from a parent element.</td>
+        </tr>
+        <tr>
+            <td>element.replaceChild(newNode, oldNode);</td>
+            <td>Replaces a one node with a new one.</td>
+        </tr>
+        <tr>
+            <td>document.createElement(element);</td>
+            <td>Creates new element node.</td>
+        </tr>
+        <tr>
+            <td>element.cloneNode();</td>
+            <td>Clones an element and returns the resulting node.</td>
+        </tr>
+        <tr>
+            <td>document.getElementById('myImg').src = 'newImg.png';</td>
+            <td>Finds an element by id and changes the src attribute.</td>
+        </tr>
+        <tr>
+            <td>document.getElementById('myLink').href = 'https://www.github.com';</td>
+            <td>Finds an element by id and changes the href attribute.</td>
+        </tr>
+        <tr>
+            <td>document.getElementById('myParagraph').style.color = 'red';</td>
+            <td>Finds an element by id and changes the color attribute.</td>
+        </tr>
+        <tr>
+            <td>
+                <pre>var time = document.getElementById('button');
+                    time.onclick = function () {
+                    document.body.innerHTML = Date();
+                }
+            </pre>
+            </td>
+            <td>Event handlers can be assigned to elements.</td>
+        </tr>
+        <tr>
+            <td>
+                <pre>function changeClass(event) {
+                    event.target.classList.toggle('bigBorders');
+                    }
+                    rectangle.addEventListener('click', changeClass);</pre>
+            </td>
+            <td>Add event listeners to handle events, such as click, onmouseover,
+                onload, etc. </td>
         </tr>
     </table>
 </main>
