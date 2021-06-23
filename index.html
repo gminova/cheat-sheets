@@ -412,6 +412,74 @@
                 gigi=# //confirm you have set up a local database correctly</td>
         </tr>
     </table>
+    <h3>MacOS setup</h3>
+    <table>
+        <tr>
+            <td><b>COMMAND</b></td>
+            <td><b>TOOL</b></td>
+        </tr>
+        <tr>
+            <td>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</td>
+            <td>Install Homebrew installation manager for Mac</td>
+        </tr>
+        <tr>
+            <td>brew install java</td>
+            <td>Install latest java version</td>
+        </tr>
+            <tr>
+                <td>sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk</td>
+                <td>For the system Java wrappers to find this JDK, symlink it with</td>
+            </tr>
+            <tr>
+                <td>echo 'export PATH="/usr/local/opt/openjdk/bin:$PATH"' >> ~/.zshrc</td>
+                <td>openjdk is keg-only, which means it was not symlinked into /usr/local,
+                    because macOS provides similar software and installing this software in
+                    parallel can cause all kinds of trouble.
+                    
+                    If you need to have openjdk first in your PATH, run:</td>
+            </tr>
+            <tr>
+                <td>export CPPFLAGS="-I/usr/local/opt/openjdk/include"</td>
+                <td>For compilers to find openjdk you may need to set:</td>
+            </tr>
+            <tr>
+                <td>java --version</td>
+                <td>Check installation openjdk 16.0.1 2021-04-20
+                OpenJDK Runtime Environment Homebrew (build 16.0.1+0)
+                OpenJDK 64-Bit Server VM Homebrew (build 16.0.1+0, mixed mode, sharing)</td>
+            </tr>
+            <tr>
+                <td>https://s3.ap-northeast-1.amazonaws.com/dynamodb-local-tokyo/dynamodb_local_latest.zip</td>
+                <td>Install DynamoDB see here 
+                    https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html</td>
+            </tr> 
+            <tr>
+                <td>java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb</td>
+                <td>After you download the archive, extract the contents 
+                    and copy the extracted directory to a location of your choice. 
+                    To start DynamoDB on your computer, open a command prompt window, 
+                    navigate to the directory where you extracted DynamoDBLocal.jar, 
+                    and enter the following command.</td>
+            </tr>
+            <tr>
+                <td>brew install awscli</td>
+                <td>Install aws command line</td>
+            </tr>
+            <tr>
+                <td>asw configure</td>
+                <td>You can set up fake id and key AWS Access Key ID [None]: gigi
+                    AWS Secret Access Key [None]: gigi
+                    Default region name [None]: gigi
+                    Default output format [None]:</td>
+            </tr>
+            <tr>
+                <td>aws dynamodb list-tables --endpoint-url http://localhost:8000</td>
+                <td>List dynamodb tables {
+                    "TableNames": []
+                }
+                (END)</td>
+            </tr>
+    </table>
     <h2 id="md">Markdown</h2>
     <div class="md-table">
         <table>

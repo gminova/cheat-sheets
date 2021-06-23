@@ -5,19 +5,15 @@
 }
 
 body {
-    margin: 10px 20px;
     font-family: 'Spectral', serif;
     font-size: 25px;
-    background-color: #F8F8FF;
-    max-width: 1200px;
-    text-align: justify;
 }
 
 .menu-btn {
     display: block;
     font-size: 60px;
     cursor: pointer;
-    padding: 10px 10px;
+    padding: 0 10px;
     position: fixed;
     z-index: 100;
     right: 0;
@@ -28,7 +24,7 @@ body {
 .close-nav {
     margin: 0;
     font-size: 70px;
-    text-align: left;
+    text-align: right;
     cursor: pointer;
 }
 
@@ -36,11 +32,11 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     display: none;
-    height: 100%;
+    height: auto;
     top: 0;
     right: 0;
-    padding: 10px 50px;
-    position: fixed;
+    padding: 10px 20px;
+    position: absolute;
     z-index: 100;
     list-style-type: none;
     vertical-align: top;
@@ -51,9 +47,6 @@ body {
     background-color: rgba(0, 0, 0, 0.9);
     color: white;
     opacity: 0.8;
-    width: 350px;
-    border-top: solid orange 5px;
-    border-bottom: solid orange 5px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
@@ -69,9 +62,29 @@ body {
     color: orange;
 }
 
-main,
 table {
+    max-width: 80vw;
     margin: 0 auto;
+    height: auto;
+    font-size: 22px;
+    color: #F6F6F5;
+    font: 1.3rem 'Ubuntu', monospace;
+    text-align: left;
+    table-layout: fixed;
+    padding: 8px;
+}
+
+tr,
+td {
+    word-break: break-all;
+    background-color: #2C001E;
+    border-bottom: 1px solid white;
+    padding: 10px 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #75275c;
+    color: orange;
 }
 
 img {
@@ -87,25 +100,6 @@ h4 {
     text-align: center;
     margin-top: 20px;
     text-transform: UPPERCASE;
-}
-
-table {
-    max-width: 600px;
-    font-size: 22px;
-}
-
-table,
-th,
-td {
-    background-color: #2C001E;
-    color: #F6F6F5;
-    font: 1.3rem 'Ubuntu', monospace;
-    border-left: hidden;
-    border-right: 5px solid orange;
-    border-collapse: collapse;
-    text-align: left;
-    table-layout: fixed;
-    padding: 8px;
 }
 
 .blockquote {
